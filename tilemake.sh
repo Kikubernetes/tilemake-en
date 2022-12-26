@@ -5,13 +5,14 @@
 
 read -p "How many pngs for one seties?> " nump
 num=$((nump-1))
-echo "There are ${nump} pngs in one series."
-read -p "Enter the name of pngs with a space between in order you like(eg. T1 T2 DWI...)> " -a ary
+echo "There are ${nump} images in one series."
+read -p "Enter the name of series with a space between in order you like(eg. T1 T2 DWI...)> " -a ary
 numary=${#ary[@]}
-echo "${ary[@]} => ${numary}series of image will be made into tile."
+echo "A series of tiled images will be created with ${numary} series of images."
+echp "The order of arrangement is ${ary}"
 
 case $numary in
-    [0-1])  echo "Please select 2 to 6 series of image."
+    [0-1])  echo "Please select 2 to 6 series of images."
             exit ;;
     2)
     for i in `seq -f "%04g" 0 1 $num`; do
@@ -63,7 +64,7 @@ case $numary in
         tile$i.png 
     done
      ;;
-     *) echo "Please select 2 to 6 series of image." 
+     *) echo "Please select 2 to 6 series of images." 
         exit ;;
 esac
 mkdir tiles
