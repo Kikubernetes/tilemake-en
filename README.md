@@ -24,9 +24,9 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. open the file in mrview
 1. view→Toggle all annotations to remove text and crosshair on the screen
 1. adjust the image if necessary (intensity, orientation, etc.)
-<img src="2022-11-10-21-17-12.png" width="200"><img src="2022-11-10-21-17-51.png" width="200"><img src="2022-11-11%201.24.44.png" width="200">
-1. select Tools→Screen capture
-2. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
+2. select Tools→Screen capture
+![](2022-12-26-19-11-11.png)
+1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
 
     1. Scroll the image to the desired starting position. 
     2. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later. 
@@ -36,8 +36,8 @@ Tools: MRtrix3, FSL, tilemake.sh
     6. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings. 
     7. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
 
-3. Press record button (red circle) to save as png.
-4. when the images you want to put on the slides are collected, the preparation is complete.
+2. Press record button (red circle) to save as png.
+3. when the images you want to put on the slides are collected, the preparation is complete.
 
 ### cooking
 
