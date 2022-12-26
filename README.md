@@ -53,8 +53,8 @@ chmod 755 tilemake.sh　#make executable
 bash tilemake.sh　#run
 ```
 
-- How many png files per image? >: Specify the number of pngs per type of image you wish to arrange (in the above case, 22).
-- Enter the names of the images separated by spaces in the order in which you want them to be arranged > Enter the names of the images you want to arrange separated by spaces
+- "How many png files per image?">: Specify the number of pngs per type of image you wish to arrange (in the above case, 22).
+- "Enter the names of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)"> Enter the names of the images separated by spaces in the order in which you want them to be arranged.
   - Use the prefix the image is saved in ScreenCapture
   - ex) In the case of the sample image: `T2 T1 fMRI b0 DWI FA`
   - Select 2-6 series

@@ -3,10 +3,10 @@
 # Make tiles from pngs. You can select Minimum 2 to Maximum 6 series.
 # First make screen capture of your image with mrview and save as pngs (same number from all images).
 
-read -p "How many pngs for one seties?> " nump
+read -p "How many png files per image? > " nump
 num=$((nump-1))
 echo "There are ${nump} images in one series."
-read -p "Enter the name of series with a space between in order you like(eg. T1 T2 DWI...)> " -a ary
+read -p "Enter the names of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)> " -a ary
 numary=${#ary[@]}
 echo "A series of tiled images will be created with ${numary} series of images."
 echp "The order of arrangement is ${ary}"
