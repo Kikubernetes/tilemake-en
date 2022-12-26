@@ -25,7 +25,7 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. view→Toggle all annotations to remove text and crosshair on the screen
 1. adjust the image if necessary (intensity, orientation, etc.)
 1. select Tools→Screen capture
-<img src="2022-11-10-21-17-12.png" width="300"><img src="2022-11-10-21-17-51.png" width="200"><img src="2022-11-11%201.24.44.png" width="400">
+<img src="2022-11-10-21-17-12.png" width="200"><img src="2022-11-10-21-17-51.png" width="200"><img src="2022-11-11%201.24.44.png" width="300">
 1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
 
     1. Scroll the image to the desired starting position. 
