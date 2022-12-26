@@ -16,9 +16,9 @@ Tools: MRtrix3, FSL, tilemake.sh
   * MRtrix3　<https://github.com/MRtrix3/homebrew-mrtrix3>
   * FSL      <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation>
 
-### Prep.
+### Preperation
 
-#### Use mrview's screencapture to create  png files of the images you want to put on your slide
+#### Use mrview's screencapture to create  png files of the images you want to put on your slide.
 
 1. for DICOM images, convert to NiFTI (use dcm2niix or similar)
 1. open the file in mrview
@@ -39,7 +39,7 @@ Tools: MRtrix3, FSL, tilemake.sh
 2. Press record button (red circle) to save as png.
 3. when the images you want to put on the slides are collected, the preparation is complete.
 
-### cooking
+### Cooking
 
 #### tilemake.sh to create tiled png files
 
@@ -67,7 +67,7 @@ bash tilemake.sh　#run
 
 #### Put the resulting tiled images into PowerPoint one at a time.
 
-PowerPoint has a photo album feature to import multiple images one at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from here <https://ja.libreoffice.org>)
-After installation, open a new file and select Insert > Media > Photo Albums to insert one photo at a time. Then save the file in .pptx format and you can copy and paste the entire slide into PowerPoint.
+PowerPoint has a photo album feature to import multiple images (one image per slide) at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from here <https://www.libreoffice.org>)
+After installation, open a new presentation file and select Insert > Media > Photo Albums to insert multiple images (one image per slide) at a time. Then save the file in .pptx format, and you can copy and paste the entire slide into PowerPoint.
 
 <img src="2022-11-10-21-13-58.png" width="500">
