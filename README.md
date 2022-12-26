@@ -1,69 +1,73 @@
 # tilemake
 
-## DICOM（or NIfTI）画像を使ってPowerpoint スライドを作る
+## Create Powerpoint slides with DICOM (or NIfTI) images
 
-### DICOM形式、もしくはNIfTI形式の画像しか手元になくても、図のようなタイル状の画像を作ることができます
+### you can create tiled images as shown in the figure only with DICOM or NIFTI images.
 
 ![0](2022-11-10-22-58-00.png)
 
-材料：DICOMファイル（もしくはNIfTIファイル）
+Materials: DICOM files (or NIfTI files)
 
-道具：MRtrix3、FSL、tilemake.sh
+Tools: MRtrix3, FSL, tilemake.sh
 
-* インストール方法はこちら（大変有名かつ有用なソフトですが、サイズは大きいのでご注意ください）
+* Click here for installation instructions (very famous and useful software for brain image analysis, but beware of its large size)
+
 
   * MRtrix3　<https://github.com/MRtrix3/homebrew-mrtrix3>
   * FSL      <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation>
 
-### 下ごしらえ
+### Prep.
 
-#### mrviewのscreencaptureを使ってスライドに載せたい画像のpngファイルを作る
+#### Use mrview's screencapture to create  png files of the images you want to put on your slide
 
-1. DICOM画像の場合、NiFTIに変換しておく（dcm2niixなどを使う）
-1. mrviewで開く
-1. view→Toggle all annotationsで画面の文字やcrosshairを消す
-1. 必要に応じて画像の調整（intensityや向きなど）
-1. Tools→Screen captureを選ぶ
-
+1. for DICOM images, convert to NiFTI (use dcm2niix or similar)
+1. open the file in mrview
+1. view→Toggle all annotations to remove text and crosshair on the screen
+1. adjust the image if necessary (intensity, orientation, etc.)
+1. select Tools→Screen capture
 <img src="2022-11-10-21-17-12.png" width="300"><img src="2022-11-10-21-17-51.png" width="200"><img src="2022-11-11%201.24.44.png" width="400">
+1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
 
-1. 横断像を同期してページングする（読影ビューアっぽい見た目にする）には右上図のように設定する。
-    1. 画像をスクロールして開始したい位置を表示する
-    2. Translateの右端のボックス（Z軸）を終了位置に合わせた数値にする。よくわからなければ図と同じ数値にして後から調整。
-    3. CaptureのStart Indexは0、Frames は欲しい枚数
-    4. OutputのPrefixで画像の名前を決める（T2、DWIなど簡単な方がgood）
-    5. 出力先のディレクトリを選ぶ
-    6. 設定したら左下の三角ボタンでテストプレイを行い調整する
-    7. ⅰ-ⅲの条件を揃えればスライス厚に関わらず位置を同期することができる
-1. 録音ボタン（赤丸）でpngとして保存される。
-1. スライドに載せたい画像を揃えたら下ごしらえ完了。
+    1. Scroll the image to the desired starting position. 
+    1. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later. 
+    1. In Capture, set Start Index to 0 and Frames to the number of frames you want. 
+    1. choose a name for the image in Output's Prefix (T2, DWI, etc., the simpler the better) 
+    1. Select the directory where you want to output the images. 
+    1. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings. 
+    1. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
 
-### 調理
+1. Press record button (red circle) to save as png.
+1. when the images you want to put on the slides are collected, the preparation is complete.
 
-#### tilemake.shを使ってタイル状に並んだpngファイルを作る
+### cooking
 
-まずtilemake.shをダウンロードする。右クリックから「リンク先のファイルをダウンロード」を選ぶ。
-「下ごしらえ」したpngファイルを保存したディレクトリを~/imgdirとすると
+#### tilemake.sh to create tiled png files
+
+First, download tilemake.sh. Right click and select "Download Linked File".
+Assuming ~/imgdir is the directory where you saved the "pre-cooked" png files
 
 ```bash
-cp ~/Downloads/tilemake.sh ~/imgdir　#imgdirにコピー
+cp ~/Downloads/tilemake.sh ~/imgdir　#copy to imgdir
 cd ~/imgdir
-chmod 755 tilemake.sh　#実行可能にする
-bash tilemake.sh　#実行
+chmod 755 tilemake.sh　#make executable
+bash tilemake.sh　#run
 ```
 
-- １画像あたり何枚のpngファイルがありますか?＞　には並べたい画像の1種類あたりの枚数を指定(上記だと22枚)
-- 並べたい順に画像の名前をスペースで区切って入力して下さい＞　には並べたい画像の名前をスペース区切りで記載
-  - ScreenCaptureで画像を保存した時のPrefix
-  - 例)見本の画像の場合　`T2 T1 fMRI b0 DWI FA`
-  - 2-6種類を選ぶ
-- タイル状に並んだpngファイルがtilesフォルダ内に出力される。
+- How many png files per image? >: Specify the number of pngs per type of image you wish to arrange (in the above case, 22).
+- Enter the names of the images separated by spaces in the order in which you want them to be arranged > Enter the names of the images you want to arrange separated by spaces
+  - Use the prefix the image is saved in ScreenCapture
+  - ex) In the case of the sample image: `T2 T1 fMRI b0 DWI FA`
+  - Select 2-6 series
+- After processing, tiled png files are output in the "tiles" folder.
+  
 
-### 仕上げ
 
-#### できたタイル画像をパワーポイントに１枚ずつ貼る
 
-PowerPointには複数画像を１枚ずつインポートするフォトアルバム機能があるが、Mac版にはない場合がある。その場合、LibreOfficeを使うのが楽。(こちら <https://ja.libreoffice.org> からダウンロードできる)
-インストール後、新規ファイルを開いて挿入＞メディア＞フォトアルバムを選ぶと１枚ずつ挿入できる。その後.pptx形式で保存すればPowerPointにスライドごとコピペできる。
+### Finishing touches
+
+#### Put the resulting tiled images into PowerPoint one at a time.
+
+PowerPoint has a photo album feature to import multiple images one at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from here <https://ja.libreoffice.org>)
+After installation, open a new file and select Insert > Media > Photo Albums to insert one photo at a time. Then save the file in .pptx format and you can copy and paste the entire slide into PowerPoint.
 
 <img src="2022-11-10-21-13-58.png" width="500">
