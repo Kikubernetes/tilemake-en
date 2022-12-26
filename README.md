@@ -70,4 +70,4 @@ bash tilemake.sh　#run
 PowerPoint has a photo album feature to import multiple images (one image per slide) at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from here <https://www.libreoffice.org>)
 After installation, open a new presentation file and select Insert > Media > Photo Albums to insert multiple images (one image per slide) at a time. Then save the file in .pptx format, and you can copy and paste the entire slide into PowerPoint.
 
-<img src="2022-11-10-21-13-58.png" width="500">
+![](2022-12-26-19-58-34.png)
