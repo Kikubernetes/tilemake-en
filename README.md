@@ -26,18 +26,18 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. adjust the image if necessary (intensity, orientation, etc.)
 <img src="2022-11-10-21-17-12.png" width="200"><img src="2022-11-10-21-17-51.png" width="200"><img src="2022-11-11%201.24.44.png" width="200">
 1. select Tools→Screen capture
-1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
+2. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
 
     1. Scroll the image to the desired starting position. 
-    1. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later. 
-    1. In Capture, set Start Index to 0 and Frames to the number of frames you want. 
-    1. choose a name for the image in Output's Prefix (T2, DWI, etc., the simpler the better) 
-    1. Select the directory where you want to output the images. 
-    1. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings. 
-    1. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
+    2. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later. 
+    3. In Capture, set Start Index to 0 and Frames to the number of frames you want. 
+    4. choose a name for the image in Output's Prefix (T2, DWI, etc., the simpler the better) 
+    5. Select the directory where you want to output the images. 
+    6. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings. 
+    7. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
 
-1. Press record button (red circle) to save as png.
-1. when the images you want to put on the slides are collected, the preparation is complete.
+3. Press record button (red circle) to save as png.
+4. when the images you want to put on the slides are collected, the preparation is complete.
 
 ### cooking
 
