@@ -6,10 +6,10 @@
 read -p "How many png files per image? > " nump
 num=$((nump-1))
 echo "There are ${nump} images in one series."
-read -p "Enter the names of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)> " -a ary
+read -p "Enter the name of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)> " -a ary
 numary=${#ary[@]}
-echo "A series of tiled images will be created with ${numary} series of images."
-echp "The order of arrangement is ${ary}"
+echo "tiled images will be created with ${numary} series of images."
+echo "The order of arrangement is ${ary[@]}"
 
 case $numary in
     [0-1])  echo "Please select 2 to 6 series of images."
