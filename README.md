@@ -45,6 +45,10 @@ Tools: MRtrix3, FSL, tilemake.sh
 #### Run tilemake.sh to create tiled png files
 
 First, clone this repository anywhere you like.
+```
+cd ~
+git clone https://github.com/Kikubernetes/tilemake-en.git
+```
 Assuming that ~/imgdir is the directory where you saved the "pre-cooked" png files and this repository is in home directory,
 
 ```bash
