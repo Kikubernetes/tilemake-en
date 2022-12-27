@@ -44,11 +44,11 @@ Tools: MRtrix3, FSL, tilemake.sh
 
 #### Run tilemake.sh to create tiled png files
 
-First, download tilemake.sh. Right click and select "Download Linked File".
-Assuming ~/imgdir is the directory where you saved the "pre-cooked" png files
+First, clone this repository anywhere you like.
+Assuming that ~/imgdir is the directory where you saved the "pre-cooked" png files and this repository is in home directory,
 
 ```bash
-mv ~/Downloads/tilemake.sh ~/imgdir　#move it to imgdir
+mv ~/tilemake-en/tilemake.sh ~/imgdir　#move tilemake.sh to imgdir
 cd ~/imgdir
 chmod 755 tilemake.sh　#make executable
 bash tilemake.sh　#run
