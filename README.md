@@ -38,6 +38,8 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. Press record button (red circle) to save as png.
 1. when the images you want to put on the slides are collected, the preparation is complete.
 
+(If anyone knows how to automate this part of the process, please let me know.)
+
 ### Cooking
 
 #### tilemake.sh to create tiled png files
