@@ -2,7 +2,7 @@
 
 ## Create Powerpoint slides with DICOM (or NIfTI) images
 
-### you can create tiled images as shown in the figure only with DICOM or NIFTI images.
+### you can create tiled images as shown in the figure only with DICOM or NIFTI images
 
 ![0](2022-11-10-22-58-00.png)
 
@@ -12,9 +12,8 @@ Tools: MRtrix3, FSL, tilemake.sh
 
 * Click here for installation instructions (very famous and useful software for brain image analysis, but beware of its large size)
 
-
-  * MRtrix3　<https://github.com/MRtrix3/homebrew-mrtrix3>
-  * FSL      <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation>
+  * [MRtrix3](https://github.com/MRtrix3/homebrew-mrtrix3)
+  * [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation)
 
 ### Preperation
 
@@ -26,14 +25,14 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. adjust the image if necessary (intensity, orientation, etc.)
 2. select Tools→Screen capture
 ![](2022-12-26-19-11-11.png)
-1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure. 
+1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure.
 
-    1. Scroll the image to the desired starting position. 
-    2. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later. 
-    3. In Capture, set Start Index to 0 and Frames to the number of frames you want. 
-    4. choose a name for the image in Output's Prefix (T2, DWI, etc., the simpler the better) 
-    5. Select the directory where you want to output the images. 
-    6. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings. 
+    1. Scroll the image to the desired starting position.
+    2. set the box (Z-axis) at the right end of Translate to a value that matches the end position. If you are not sure, set the same value as in the figure and adjust it later.
+    3. In Capture, set Start Index to 0 and Frames to the number of frames you want.
+    4. choose a name for the image in Output's Prefix (T2, DWI, etc., the simpler the better)
+    5. Select the directory where you want to output the images.
+    6. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings.
     7. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
 
 2. Press record button (red circle) to save as png.
@@ -47,27 +46,26 @@ First, download tilemake.sh. Right click and select "Download Linked File".
 Assuming ~/imgdir is the directory where you saved the "pre-cooked" png files
 
 ```bash
-cp ~/Downloads/tilemake.sh ~/imgdir　#copy to imgdir
+mv ~/Downloads/tilemake.sh ~/imgdir　#move to imgdir
 cd ~/imgdir
 chmod 755 tilemake.sh　#make executable
 bash tilemake.sh　#run
 ```
 
 - "How many png files per image?">: Specify the number of pngs per type of image you wish to arrange (in the above case, 22).
-- "Enter the names of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)"> Enter the names of the images separated by spaces in the order in which you want them to be arranged.
+- "Enter the names of the images you want to arrange separated by spaces(eg. T1 T2 DWI...)"> Enter the names of the image series separated by spaces in the order in which you want them to be arranged.
   - Use the prefix the image is saved in ScreenCapture
   - ex) In the case of the sample image: `T2 T1 fMRI b0 DWI FA`
   - Select 2-6 series
 - After processing, tiled png files are output in the "tiles" folder.
   
-
-
-
 ### Finishing touches
 
-#### Put the resulting tiled images into PowerPoint one at a time.
+#### Put the resulting tiled images into PowerPoint one at a time
 
-PowerPoint has a photo album feature to import multiple images (one image per slide) at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from here <https://www.libreoffice.org>)
+PowerPoint has a photo album feature to import multiple images (one image per slide) at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from [here][1])
 After installation, open a new presentation file and select Insert > Media > Photo Albums to insert multiple images (one image per slide) at a time. Then save the file in .pptx format, and you can copy and paste the entire slide into PowerPoint.
+Click here for [LibreOffice Photo Album instruction][2].
 
-![](2022-12-26-19-58-34.png)
+[1]:https://www.libreoffice.org
+[2]:https://help.libreoffice.org/7.4/ro/text/simpress/guide/photo_album.html?&DbPAR=SHARED&System=MAC
