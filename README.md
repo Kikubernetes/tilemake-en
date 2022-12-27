@@ -1,8 +1,8 @@
 # tilemake
 
-## Create Powerpoint slides with DICOM (or NIfTI) images
+## Make a Powerpoint presentation with DICOM (or NIfTI) images
 
-### you can create tiled images as shown in the figure only with DICOM or NIFTI images
+### you can create tiled images as shown in the figure from DICOM or NIfTI image.
 
 ![0](2022-11-10-22-58-00.png)
 
@@ -23,7 +23,7 @@ Tools: MRtrix3, FSL, tilemake.sh
 1. open the file in mrview
 1. view→Toggle all annotations to remove text and crosshair on the screen
 1. adjust the image if necessary (intensity, orientation, etc.)
-2. select Tools→Screen capture
+1. select Tools→Screen capture
 ![](2022-12-26-19-11-11.png)
 1. To synchronize paging through the cross-sectional images (to make them look like a radiologist's viewer), set parameters as shown in the upper right figure.
 
@@ -35,8 +35,8 @@ Tools: MRtrix3, FSL, tilemake.sh
     6. After setting, perform a test play using the triangle button in the lower left corner to adjust the settings.
     7. if the conditions i-iii are met, the position can be synchronized regardless of the slice thickness.
 
-2. Press record button (red circle) to save as png.
-3. when the images you want to put on the slides are collected, the preparation is complete.
+1. Press record button (red circle) to save as png.
+1. when the images you want to put on the slides are collected, the preparation is complete.
 
 ### Cooking
 
@@ -46,7 +46,7 @@ First, download tilemake.sh. Right click and select "Download Linked File".
 Assuming ~/imgdir is the directory where you saved the "pre-cooked" png files
 
 ```bash
-mv ~/Downloads/tilemake.sh ~/imgdir　#move to imgdir
+mv ~/Downloads/tilemake.sh ~/imgdir　#move it to imgdir
 cd ~/imgdir
 chmod 755 tilemake.sh　#make executable
 bash tilemake.sh　#run
@@ -59,9 +59,9 @@ bash tilemake.sh　#run
   - Select 2-6 series
 - After processing, tiled png files are output in the "tiles" folder.
   
-### Finishing touches
+### Finishing
 
-#### Put the resulting tiled images into PowerPoint one at a time
+#### Put the tiled images into PowerPoint
 
 PowerPoint has a photo album feature to import multiple images (one image per slide) at a time, but the Mac version may not have it. In that case, it is easier to use LibreOffice. (You can download it from [here][1])
 After installation, open a new presentation file and select Insert > Media > Photo Albums to insert multiple images (one image per slide) at a time. Then save the file in .pptx format, and you can copy and paste the entire slide into PowerPoint.
